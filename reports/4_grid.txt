@@ -1,0 +1,97 @@
+== RQ3 grid: left and right, stroke minus control, degrees
+proto         seg sd      gate arm  n  S  C      b      lo     hi     p  perm     rob   lev
+ head     t60-360  L    CARNet  un 54 31 23 -2.835 -15.935 10.266 0.666 0.639  -8.460 0.213
+ head     t60-360  L    CARNet  pr 56 33 23 -0.941 -13.359 11.476 0.880 0.880  -6.277 0.212
+ head     t60-360  L    CARNet  ro 56 33 23 -1.077 -13.128 10.975 0.858 0.848  -5.025 0.212
+ head     t60-360  L surrogate  un 59 36 23 -9.138 -25.621  7.346 0.271 0.250  -8.310 0.214
+ head     t60-360  L surrogate  pr 59 36 23 -5.542 -22.048 10.963 0.504 0.450  -6.783 0.214
+ head     t60-360  L surrogate  ro 59 36 23 -3.967 -18.505 10.572 0.587 0.548  -5.396 0.214
+ head     t60-360  L  all bins  un 62 37 25 -3.726 -18.906 11.454 0.625 0.676  -1.064 0.200
+ head     t60-360  L  all bins  pr 62 37 25 -1.209 -16.179 13.761 0.872 0.869   1.196 0.200
+ head     t60-360  L  all bins  ro 62 37 25 -1.405 -16.333 13.523 0.851 0.837   0.959 0.200
+ head     t60-360  R    CARNet  un 52 33 19 -1.519 -11.257  8.219 0.755 0.785  -3.602 0.245
+ head     t60-360  R    CARNet  pr 52 33 19  0.273 -10.519 11.065 0.960 0.975  -2.462 0.245
+ head     t60-360  R    CARNet  ro 52 33 19  1.390  -8.945 11.725 0.788 0.838  -1.847 0.245
+ head     t60-360  R surrogate  un 53 33 20 -3.224 -13.296  6.848 0.523 0.528  -4.231 0.242
+ head     t60-360  R surrogate  pr 53 33 20 -0.546 -10.593  9.501 0.913 0.941  -2.934 0.242
+ head     t60-360  R surrogate  ro 52 32 20 -2.773 -12.930  7.385 0.586 0.668  -4.992 0.247
+ head     t60-360  R  all bins  un 54 34 20 -7.943 -18.057  2.172 0.121 0.155  -9.555 0.241
+ head     t60-360  R  all bins  pr 54 34 20 -6.727 -19.236  5.782 0.285 0.349  -6.929 0.241
+ head     t60-360  R  all bins  ro 54 34 20 -4.516 -14.783  5.751 0.381 0.409  -7.128 0.241
+ sit- HEADERCLOCK  L    CARNet  un 57 32 25 -3.026 -10.858  4.806 0.442 0.459  -6.041 0.206
+ sit- HEADERCLOCK  L    CARNet  pr 57 32 25 -1.242  -7.520  5.036 0.693 0.679  -0.858 0.205
+ sit- HEADERCLOCK  L    CARNet  ro 56 31 25 -0.552  -9.868  8.763 0.906 0.950  -3.808 0.206
+ sit- HEADERCLOCK  L surrogate  un 57 32 25 -4.373 -12.623  3.878 0.292 0.259  -6.537 0.208
+ sit- HEADERCLOCK  L surrogate  pr 58 33 25  1.096  -6.061  8.252 0.760 0.715   0.237 0.205
+ sit- HEADERCLOCK  L surrogate  ro 57 32 25 -4.212 -12.970  4.547 0.339 0.295  -3.609 0.205
+ sit- HEADERCLOCK  L  all bins  un 60 34 26 -4.192 -12.177  3.793 0.297 0.250  -5.221 0.201
+ sit- HEADERCLOCK  L  all bins  pr 60 34 26  4.356  -3.863 12.575 0.293 0.221   1.785 0.201
+ sit- HEADERCLOCK  L  all bins  ro 60 34 26 -5.358 -13.800  3.083 0.209 0.191  -6.375 0.201
+ sit- HEADERCLOCK  R    CARNet  un 47 29 18 -4.593 -13.415  4.229 0.299 0.346  -5.585 0.244
+ sit- HEADERCLOCK  R    CARNet  pr 45 27 18 -2.264  -7.884  3.356 0.420 0.413  -2.058 0.244
+ sit- HEADERCLOCK  R    CARNet  ro 45 27 18 -2.859  -9.185  3.467 0.366 0.353  -3.214 0.244
+ sit- HEADERCLOCK  R surrogate  un 47 29 18 -2.296 -10.676  6.085 0.583 0.515  -3.959 0.244
+ sit- HEADERCLOCK  R surrogate  pr 45 27 18 -1.220  -6.714  4.273 0.656 0.641  -1.414 0.244
+ sit- HEADERCLOCK  R surrogate  ro 46 27 19 -2.782  -9.692  4.127 0.421 0.430  -2.721 0.239
+ sit- HEADERCLOCK  R  all bins  un 48 29 19 -3.545 -12.326  5.235 0.420 0.383  -3.457 0.239
+ sit- HEADERCLOCK  R  all bins  pr 48 29 19  4.342  -3.862 12.546 0.292 0.240   0.911 0.239
+ sit- HEADERCLOCK  R  all bins  ro 48 29 19 -5.264 -11.833  1.306 0.113 0.091  -4.298 0.239
+ sit-    first300  L    CARNet  un 53 30 23 -1.643 -18.748 15.462 0.848 0.833  -5.839 0.251
+ sit-    first300  L    CARNet  pr 52 29 23  0.140 -18.453 18.733 0.988 0.983  -4.035 0.254
+ sit-    first300  L    CARNet  ro 50 27 23 -3.252 -24.061 17.556 0.754 0.681  -8.433 0.268
+ sit-    first300  L surrogate  un 56 32 24 -2.124 -17.431 13.183 0.782 0.771  -6.538 0.250
+ sit-    first300  L surrogate  pr 57 32 25  7.021 -11.943 25.986 0.461 0.434  -2.354 0.245
+ sit-    first300  L surrogate  ro 53 30 23 -7.396 -22.778  7.987 0.339 0.316 -10.244 0.257
+ sit-    first300  L  all bins  un 60 34 26  1.513 -13.349 16.375 0.839 0.880  -6.276 0.238
+ sit-    first300  L  all bins  pr 60 34 26  3.014 -11.055 17.082 0.669 0.683  -2.614 0.238
+ sit-    first300  L  all bins  ro 60 34 26  0.971 -14.337 16.279 0.899 0.900  -5.758 0.238
+ sit-    first300  R    CARNet  un 44 27 17  0.684 -11.734 13.101 0.912 0.939  -1.055 0.287
+ sit-    first300  R    CARNet  pr 43 25 18  3.252  -9.799 16.304 0.617 0.581   1.056 0.305
+ sit-    first300  R    CARNet  ro 42 25 17  0.471 -11.443 12.385 0.937 0.936  -1.455 0.312
+ sit-    first300  R surrogate  un 46 28 18  0.846 -11.848 13.540 0.894 0.906  -1.844 0.279
+ sit-    first300  R surrogate  pr 46 28 18  2.530  -9.937 14.998 0.684 0.662   0.637 0.279
+ sit-    first300  R surrogate  ro 46 28 18 -0.304 -11.894 11.287 0.958 0.953  -3.492 0.279
+ sit-    first300  R  all bins  un 48 29 19 -0.820 -16.858 15.217 0.918 0.939  -4.410 0.267
+ sit-    first300  R  all bins  pr 48 29 19 -1.924 -15.261 11.413 0.772 0.788  -1.991 0.267
+ sit-    first300  R  all bins  ro 48 29 19 -2.760 -17.839 12.320 0.714 0.782  -5.048 0.267
+ sit-  longest300  L    CARNet  un 54 31 23 -0.919 -17.629 15.791 0.912 0.906  -6.036 0.295
+ sit-  longest300  L    CARNet  pr 53 30 23 -1.014 -19.751 17.724 0.914 0.881  -6.214 0.295
+ sit-  longest300  L    CARNet  ro 51 28 23  0.537 -19.064 20.137 0.956 0.942  -5.178 0.307
+ sit-  longest300  L surrogate  un 54 31 23 -2.694 -16.801 11.414 0.703 0.674  -5.767 0.305
+ sit-  longest300  L surrogate  pr 56 32 24 10.345  -9.467 30.157 0.299 0.285  -1.166 0.287
+ sit-  longest300  L surrogate  ro 54 30 24  0.783 -16.017 17.582 0.926 0.933  -3.786 0.302
+ sit-  longest300  L  all bins  un 59 34 25  3.628 -10.388 17.644 0.606 0.684  -3.167 0.280
+ sit-  longest300  L  all bins  pr 59 34 25  7.490  -6.865 21.845 0.300 0.333   0.767 0.280
+ sit-  longest300  L  all bins  ro 59 34 25  5.784  -8.331 19.900 0.415 0.440  -1.728 0.280
+ sit-  longest300  R    CARNet  un 44 27 17 -5.715 -17.081  5.652 0.315 0.457  -7.336 0.341
+ sit-  longest300  R    CARNet  pr 45 27 18 -3.607 -15.023  7.808 0.527 0.540  -5.993 0.333
+ sit-  longest300  R    CARNet  ro 43 26 17 -4.913 -16.145  6.319 0.381 0.403  -6.317 0.344
+ sit-  longest300  R surrogate  un 46 28 18 -5.215 -16.715  6.285 0.365 0.480  -7.935 0.332
+ sit-  longest300  R surrogate  pr 46 28 18 -1.837 -14.191 10.517 0.765 0.772  -4.075 0.332
+ sit-  longest300  R surrogate  ro 45 27 18 -3.708 -15.110  7.694 0.515 0.489  -5.551 0.335
+ sit-  longest300  R  all bins  un 48 30 18 -7.641 -18.267  2.984 0.154 0.231  -6.035 0.313
+ sit-  longest300  R  all bins  pr 48 30 18 -6.635 -17.492  4.223 0.225 0.251  -4.859 0.313
+ sit-  longest300  R  all bins  ro 48 30 18 -8.010 -18.021  2.001 0.114 0.127  -6.317 0.313
+corrected-clock aligned cells: 24 | CI excludes 0: 0 | median -0.7 range -7.4 to 10.3 | half-width median 12.4
+header-clock cells, left CARNet: [{'arm': 'un', 'n': 57, 'b': -3.03, 'lo': -10.86, 'hi': 4.81, 'p': 0.44}, {'arm': 'pr', 'n': 57, 'b': -1.24, 'lo': -7.52, 'hi': 5.04, 'p': 0.69}, {'arm': 'ro', 'n': 56, 'b': -0.55, 'lo': -9.87, 'hi': 8.76, 'p': 0.91}]
+
+== regime by group within analysed left channels, K, coherence
+head-up-tilt t60-360 n 62 S hi/lo 26 11 C hi/lo 5 20 K med 5.0 coh 0.45 secs med 300 lag lo/hi -58/80 phase un med by C-lo,C-hi,S-lo,S-hi [41.1, 30.7, 28.3, 28.7]
+sit-stand-balance HEADERCLOCK n 60 S hi/lo 23 11 C hi/lo 7 19 K med 11.0 coh 0.45 secs med 600 lag lo/hi -119/168 phase un med by C-lo,C-hi,S-lo,S-hi [9.6, 3.0, 7.3, -1.9]
+sit-stand-balance first300 n 60 S hi/lo 23 11 C hi/lo 7 19 K med 5.0 coh 0.45 secs med 300 lag lo/hi -54/90 phase un med by C-lo,C-hi,S-lo,S-hi [32.5, 26.3, 25.9, 22.6]
+sit-stand-balance longest300 n 59 S hi/lo 23 11 C hi/lo 6 19 K med 5.0 coh 0.51 secs med 300 lag lo/hi -54/79 phase un med by C-lo,C-hi,S-lo,S-hi [32.5, 26.8, 25.9, 20.4]
+sit-stand-balance second300 n 58 S hi/lo 22 11 C hi/lo 6 19 K med 5.0 coh 0.50 secs med 300 lag lo/hi -55/77 phase un med by C-lo,C-hi,S-lo,S-hi [23.1, 27.2, 28.3, 28.8]
+
+== regime effect on unaligned phase by frequency (high minus low, adjusted for group), against pure delay at band centre
+head-up-tilt L tau 138 ms | 0.03-0.07: -10.0 (-32.5,12.6) pred -2.5 | 0.07-0.14: -4.2 (-17.5,9.2) pred -5.2 | 0.14-0.20: -0.8 (-25.4,23.7) pred -8.4 | 0.07-0.20: -9.3 (-22.2,3.6) pred -6.7 | 0.20-0.30: -17.2 (-32.2,-2.2) pred -12.4 | 0.30-0.50: -16.0 (-47.2,15.2) pred -19.9
+head-up-tilt R tau 152 ms | 0.03-0.07: +0.5 (-27.9,28.9) pred -2.7 | 0.07-0.14: +4.2 (-10.9,19.3) pred -5.7 | 0.14-0.20: -8.2 (-21.2,4.8) pred -9.3 | 0.07-0.20: -2.1 (-11.7,7.6) pred -7.4 | 0.20-0.30: +5.1 (-19.6,29.7) pred -13.7 | 0.30-0.50: -5.9 (-22.3,10.5) pred -21.9
+sit-stand-balance L tau 144 ms | 0.03-0.07: +0.1 (-25.8,26.1) pred -2.6 | 0.07-0.14: -13.7 (-32.2,4.9) pred -5.4 | 0.14-0.20: -11.1 (-36.8,14.7) pred -8.8 | 0.07-0.20: -14.9 (-33.5,3.8) pred -7.0 | 0.20-0.30: -2.7 (-12.9,7.5) pred -12.9 | 0.30-0.50: -2.8 (-14.5,8.9) pred -20.7
+sit-stand-balance R tau 154 ms | 0.03-0.07: -9.1 (-42.6,24.4) pred -2.8 | 0.07-0.14: -16.2 (-33.0,0.6) pred -5.8 | 0.14-0.20: -15.0 (-44.2,14.2) pred -9.4 | 0.07-0.20: -16.9 (-34.7,0.8) pred -7.5 | 0.20-0.30: -2.6 (-11.5,6.4) pred -13.9 | 0.30-0.50: -15.3 (-27.1,-3.4) pred -22.2
+
+== bias analysis: expected group difference from regime alone
+head-up-tilt high-regime share difference 0.50; tau 138 ms; pure-delay phase at LF centre -6.7 deg; expected bias -3.4 deg
+sit-stand-balance high-regime share difference 0.41; tau 144 ms; pure-delay phase at LF centre -7.0 deg; expected bias -2.8 deg
+
+== reliability, left, all bins, unaligned
+first300 vs second300 n 58 Spearman 0.11 (p 0.390); median abs diff 13.0 deg
+first300 vs t60-360 n 58 Spearman 0.15 (p 0.249); median abs diff 15.9 deg

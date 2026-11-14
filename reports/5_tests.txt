@@ -1,0 +1,30 @@
+reliability un_ph first300 vs second300 n 50 rho 0.17 p 0.243; median abs diff 11.6
+reliability un_ph first300 vs t60-360 n 49 rho 0.19 p 0.196; median abs diff 12.9
+reliability un_ph_s first300 vs second300 n 51 rho 0.21 p 0.136; median abs diff 9.3
+reliability un_ph_s first300 vs t60-360 n 53 rho 0.22 p 0.113; median abs diff 12.9
+reliability un_ph_all first300 vs second300 n 58 rho 0.11 p 0.390; median abs diff 13.0
+reliability un_ph_all first300 vs t60-360 n 58 rho 0.15 p 0.249; median abs diff 15.9
+sit-stand-balance pr A n 52 S 29 base 0.846 plus 0.829 delta -0.017 CI [-0.111, 0.025]
+sit-stand-balance pr R n 52 S 29 base 0.699 plus 0.694 delta -0.005 CI [-0.148, 0.091]
+  physiology alone 0.436; regime alone 0.649; A+regime 0.861; A+regime+physio 0.838
+sit-stand-balance ro A n 50 S 27 base 0.838 plus 0.818 delta -0.020 CI [-0.136, 0.031]
+sit-stand-balance ro R n 50 S 27 base 0.693 plus 0.685 delta -0.009 CI [-0.208, 0.091]
+  physiology alone 0.416; regime alone 0.630; A+regime 0.853; A+regime+physio 0.829
+head-up-tilt pr A n 54 S 31 base 0.810 plus 0.795 delta -0.016 CI [-0.108, 0.062]
+head-up-tilt pr R n 54 S 31 base 0.716 plus 0.695 delta -0.021 CI [-0.138, 0.067]
+  physiology alone 0.626; regime alone 0.694; A+regime 0.865; A+regime+physio 0.833
+head-up-tilt ro A n 55 S 32 base 0.819 plus 0.804 delta -0.014 CI [-0.114, 0.066]
+head-up-tilt ro R n 55 S 32 base 0.732 plus 0.712 delta -0.019 CI [-0.142, 0.065]
+  physiology alone 0.638; regime alone 0.700; A+regime 0.871; A+regime+physio 0.839
+gait mean and median by group in cohort {0: (1.16, 1.2), 1: (0.86, 0.95)}
+
+== RQ5 three links, left channel
+head-up-tilt n 60 regime hi 30 | Link 1 signals->regime: amplitude features 0.999; scale-free 0.540 | group AUC: amplitude 0.726; scale-free 0.478; regime alone 0.698
+  Link 2 score vs regime within group: {'control': (np.float64(0.89), 5, 20), 'stroke': (np.float64(0.844), 25, 10)}
+  Link 3 group AUC within regime: {'low': (np.float64(0.58), 10, 20), 'high': (np.float64(0.624), 25, 5)}
+sit-stand-balance n 60 regime hi 30 | Link 1 signals->regime: amplitude features 0.998; scale-free 0.514 | group AUC: amplitude 0.651; scale-free 0.513; regime alone 0.645
+  Link 2 score vs regime within group: {'control': (np.float64(0.955), 7, 19), 'stroke': (np.float64(1.0), 23, 11)}
+  Link 3 group AUC within regime: {'low': (np.float64(0.45), 11, 19), 'high': (np.float64(0.416), 23, 7)}
+
+== WITHDRAWN, do not report as a positive control: LF phase at highest vs lowest EtCO2 300 s windows; CO2 is confounded with time and protocol stage
+pairs 46 EtCO2 gap median 12.8 | phase high-low CO2, all bins: median -10.2, IQR [-22.0, 8.9], Wilcoxon p 0.077; share falling 63% | CARNet gate n 36 median -4.8 p 0.077

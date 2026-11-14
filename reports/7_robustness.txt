@@ -1,0 +1,77 @@
+== one regime definition: left span, all records with a usable span
+head-up-tilt all [[29, 11], [8, 20]] OR 6.6 (2.3-19.3) exact p 0.00049
+ valid only [[26, 11], [5, 20]] OR 9.5 (2.8-31.6) | invalid channels in high regime 6 of 6
+ span agrees with gain 92%, with lag 98% (n 62); stored span ratio low/high 3.63
+ order->regime 0.948; order->group 0.842; regime->group 0.720; within low regime order->group 0.859 (n 31); within high 0.642 (n 37)
+ logit group ~ regime + order: regime OR 0.45 (0.06-3.34); order OR/SD 6.8 (2.0-23.0)
+sit-stand-balance all [[26, 11], [8, 19]] OR 5.6 (1.9-16.6) exact p 0.0021
+ valid only [[24, 11], [7, 19]] OR 5.9 (1.9-18.2) | invalid channels in high regime 3 of 3
+ span agrees with gain 95%, with lag 98% (n 61); stored span ratio low/high 3.27
+ order->regime 0.949; order->group 0.826; regime->group 0.703; within low regime order->group 0.818 (n 30); within high 0.635 (n 34)
+ logit group ~ regime + order: regime OR 0.26 (0.02-2.65); order OR/SD 8.4 (2.0-34.8)
+
+== instrumental rule on the paper's regime definition (left span, valid channels): high minus low, within group
+head-up-tilt control n lo/hi 20 5 | ECG-ABP 36 ms | ECG-MCA 130 ms | ABP-MCA lag 153 ms
+head-up-tilt stroke n lo/hi 11 26 | ECG-ABP -8 ms | ECG-MCA 125 ms | ABP-MCA lag 128 ms
+sit-stand-balance control n lo/hi 19 7 | ECG-ABP 46 ms | ECG-MCA 80 ms | ABP-MCA lag 122 ms
+sit-stand-balance stroke n lo/hi 11 24 | ECG-ABP -8 ms | ECG-MCA 123 ms | ABP-MCA lag 134 ms
+
+== measured regime effect on LF phase vs pure delay; implied group bias
+head-up-tilt tau 138 ms; pure delay -6.7; measured -9.3 (-22.2, 3.6); share diff 0.50; implied bias pure -3.4, measured -4.7 (-11.1, 1.8)
+sit-stand-balance tau 144 ms; pure delay -7.0; measured -14.9 (-33.5, 3.8); share diff 0.41; implied bias pure -2.8, measured -6.1 (-13.7, 1.5)
+
+== effect of adding recording order to the phase model, CARNet gate, left
+head-up-tilt un n 54 base -2.8; with order -5.8 (-18.0, 6.4)
+head-up-tilt pr n 56 base -0.9; with order -6.0 (-17.5, 5.5)
+head-up-tilt ro n 56 base -1.1; with order -6.1 (-18.0, 5.7)
+sit-stand-balance un n 53 base -1.6; with order -3.5 (-27.5, 20.5)
+sit-stand-balance pr n 52 base +0.1; with order -5.1 (-30.8, 20.6)
+sit-stand-balance ro n 50 base -3.3; with order -6.5 (-31.3, 18.2)
+
+== precision and robust estimates, corrected clock, CARNet gate, first300/tilt
+proto sd arm  n    b    lo   hi  rob  lev
+ head  L  un 54 -2.8 -15.9 10.3 -8.5  0.2
+ head  L  pr 56 -0.9 -13.4 11.5 -6.3  0.2
+ head  L  ro 56 -1.1 -13.1 11.0 -5.0  0.2
+ head  R  un 52 -1.5 -11.3  8.2 -3.6  0.2
+ head  R  pr 52  0.3 -10.5 11.1 -2.5  0.2
+ head  R  ro 52  1.4  -8.9 11.7 -1.8  0.2
+ sit-  L  un 53 -1.6 -18.7 15.5 -5.8  0.3
+ sit-  L  pr 52  0.1 -18.5 18.7 -4.0  0.3
+ sit-  L  ro 50 -3.3 -24.1 17.6 -8.4  0.3
+ sit-  R  un 44  0.7 -11.7 13.1 -1.1  0.3
+ sit-  R  pr 43  3.3  -9.8 16.3  1.1  0.3
+ sit-  R  ro 42  0.5 -11.4 12.4 -1.5  0.3
+half-width median 12.4; widest 20.8
+
+== reliability, left, unaligned: person-level
+first300 vs second300 un_ph n 50 rho 0.17 (-0.15, 0.46); ICC -0.45; median |diff| 11.6 vs shuffled 14.8; SD diff 43.9
+first300 vs t60-360 un_ph n 49 rho 0.19 (-0.13, 0.48); ICC 0.19; median |diff| 12.9 vs shuffled 16.6; SD diff 21.7
+first300 vs second300 un_ph_all n 58 rho 0.11 (-0.16, 0.38); ICC -0.17; median |diff| 13.0 vs shuffled 16.7; SD diff 40.0
+first300 vs t60-360 un_ph_all n 58 rho 0.15 (-0.15, 0.43); ICC 0.12; median |diff| 15.9 vs shuffled 17.3; SD diff 29.5
+lag same person: median |diff| 12 ms vs shuffled 80; rho 0.86, n 59
+
+== non-circular shortcut test: regime defined from timing only
+head-up-tilt n 62 | lag-regime predicted by MCA amplitude 0.980; ABP amplitude only 0.531; MCA scale-free 0.506 | group AUC: MCA amplitude 0.749; lag-regime alone 0.668; scale-free 0.573
+  within low lag-regime group AUC 0.61 (0.38-0.83), stroke 12 control 20
+  within high lag-regime group AUC 0.47 (0.09-0.85), stroke 25 control 5
+sit-stand-balance n 61 | lag-regime predicted by MCA amplitude 1.000; ABP amplitude only 0.522; MCA scale-free 0.422 | group AUC: MCA amplitude 0.699; lag-regime alone 0.670; scale-free 0.559
+  within low lag-regime group AUC 0.44 (0.22-0.67), stroke 11 control 20
+  within high lag-regime group AUC 0.46 (0.21-0.72), stroke 24 control 6
+
+== lab table vs stored MCA x 100 by regime (sit-stand-balance, left)
+columns ['Sys MCAR SitEO', 'DIa MCAR SitEO', 'Mean MCAR SitEO', 'Sys MCAL SitEO', 'Dia MCAL SitEO', 'Mean MCAL SitEO']
+lab mean left MCA / stored mean x 100: low regime median 0.40 IQR [0.39, 0.41] n 27; high regime median 1.02 IQR [1.01, 1.04] n 27; between-regime ratio 2.53
+
+== tilt sensitivity: excluding records with a marker inside 60-360 s; mains check
+head-up-tilt ECG line at 0.18 cycles per sample above 5x background: 0 of 68
+sit-stand ECG line at 0.18 cycles per sample above 5x background: 0 of 71
+sit-stand-balance ECG line at 0.18 cycles per sample above 5x background: 46 of 64
+tilt records with marker inside window 5
+ excluded un n 52 -2.5 (-15.5, 10.4)
+ excluded pr n 54 -1.2 (-13.3, 11.0)
+ excluded ro n 54 -1.0 (-12.8, 10.9)
+
+== Shapley on AUC, both cohorts, 1000 resamples
+n=64 stroke 37 {'risk': (0.043, (np.float64(-0.115), np.float64(0.153))), 'gait': (0.162, (np.float64(0.075), np.float64(0.243))), 'meds': (0.142, (np.float64(0.022), np.float64(0.245)))}
+n=91 stroke 43 {'risk': (0.099, (np.float64(-0.017), np.float64(0.175))), 'gait': (0.123, (np.float64(0.053), np.float64(0.182))), 'meds': (0.157, (np.float64(0.067), np.float64(0.234)))}

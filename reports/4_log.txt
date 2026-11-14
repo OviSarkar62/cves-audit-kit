@@ -1,0 +1,4 @@
+regime thresholds {('head-up-tilt', 'L'): np.float64(0.08), ('head-up-tilt', 'R'): np.float64(0.07), ('sit-stand-balance', 'L'): np.float64(-0.01), ('sit-stand-balance', 'R'): np.float64(0.01)}
+head-up-tilt first pass done
+sit-stand-balance first pass done
+regime lag offsets, ms: {('head-up-tilt', 't60-360', 'L'): 138, ('head-up-tilt', 't60-360', 'R'): 152, ('sit-stand-balance', 'HEADERCLOCK', 'L'): 287, ('sit-stand-balance', 'HEADERCLOCK', 'R'): 308, ('sit-stand-balance', 'first300', 'L'): 144, ('sit-stand-balance', 'first300', 'R'): 154, ('sit-stand-balance', 'longest300', 'L'): 132, ('sit-stand-balance', 'longest300', 'R'): 151, ('sit-stand-balance', 'second300', 'L'): 132, ('sit-stand-balance', 'second300', 'R'): 162}

@@ -1,0 +1,7 @@
+PASS delay estimators recover 300 ms at 500 Hz: xcorr 300.0 ms, slope 301.6 ms
+PASS delay estimators recover 300 ms at 1000 Hz: xcorr 300.0 ms, slope 301.4 ms
+PASS known transfer phase within 1 degree: true 22.0, recovered 22.0
+INFO null 300 s: per-bin false pass 0.051; per-record pass (>=2 bins) 0.200
+PASS null per-bin false pass near 5% (300 s): 0.051
+INFO null 600 s: per-bin false pass 0.031; per-record pass (>=2 bins) 0.127
+PASS null per-bin false pass near 5% (600 s): 0.031

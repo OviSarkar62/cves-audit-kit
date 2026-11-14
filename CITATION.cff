@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "CVES audit kit"
+type: software
+license: MIT
+authors:
+  - family-names: Sarkar
+    given-names: Ovi
+  - family-names: Khaled
+    given-names: Md. Asif Bin

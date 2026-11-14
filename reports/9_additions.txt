@@ -1,0 +1,69 @@
+== environment: python 3.13.16 numpy 2.4.6 scipy 1.16.3 pandas 2.2.3 statsmodels 0.15.0 sklearn 1.6.1 wfdb 4.3.1
+
+== cohort: participant table rows 172 | stroke 84 control 88
+visit status counts: {'COMPLETED': 91, 'EXCLUDED': 55, 'INELIGIBLE': 12, 'LOST TO FOLLOW-UP': 6, 'WITHDREW CONSENT': 4, 'V1': 3, 'EXCLUDED PENDING PCP': 1}
+sit-stand-balance: n 64, stroke 37, TIA 1, completed 64
+head-up-tilt: n 68, stroke 40, TIA 1, completed 68
+both: n 63, stroke 36, TIA 1, completed 63
+either: n 69, stroke 41, TIA 1, completed 69
+
+== baseline table, sit-stand-balance cohort (stroke / control): median [IQR] or n (%); n with data
+  age: 64.0 [55.0-71.0] (n 37) / 67.0 [62.5-71.0] (n 27)
+  bmi: 26.9 [24.7-29.2] (n 37) / 24.4 [21.9-27.7] (n 27)
+  pack_years: 19.5 [0.4-46.8] (n 30) / 0.0 [0.0-9.0] (n 25)
+  gait: 0.9 [0.8-1.0] (n 36) / 1.2 [1.1-1.2] (n 27)
+  sbp: 125.8 [119.8-140.0] (n 37) / 124.3 [109.2-134.9] (n 27)
+  dbp: 58.7 [53.9-67.9] (n 37) / 60.3 [52.0-64.1] (n 27)
+  hr: 68.8 [64.7-72.2] (n 37) / 62.7 [56.8-67.0] (n 27)
+  nihss: 2.0 [1.0-3.0] (n 37) / NA
+  mrs: 1.0 [0.0-2.0] (n 36) / NA
+  sex (yes): 18/37 (49%) / 12/27 (44%)
+  htn (yes): 26/37 (70%) / 13/27 (48%)
+  diabetes (yes): 1/37 (3%) / 1/27 (4%)
+  hyperlip (yes): 25/37 (68%) / 11/27 (41%)
+  cur_tob (yes): 8/35 (23%) / 1/27 (4%)
+  antiplatelet (yes): 28/37 (76%) / 7/27 (26%)
+  anticoag (yes): 5/37 (14%) / 0/27 (0%)
+  statin (yes): 25/37 (68%) / 4/27 (15%)
+  antihyperlip (yes): 5/37 (14%) / 1/27 (4%)
+  stroke side among stroke: {'right': 17, 'left': 16, 'not recorded or other': 3, 'bilateral': 1}
+
+== phase grid summaries (corrected clock)
+12 main-gate cells, both sides, all arms: n cells 12, estimates -3.3 to 3.3, median -0.4, intervals excluding 0 0, median half-width 12.4, widest single interval -24.1 to 17.6
+6 main-gate cells, left: n cells 6, estimates -3.3 to 0.1, median -1.4, intervals excluding 0 0, median half-width 15.1, widest single interval -24.1 to 17.6
+8 main-gate aligned cells: n cells 8, estimates -3.3 to 3.3, median 0.2, intervals excluding 0 0, median half-width 12.2, widest single interval -24.1 to 17.6
+36 aligned cells, three segments x three gates: n cells 36, estimates -8.0 to 10.3, median -1.0, intervals excluding 0 0, median half-width 13.2, widest single interval -24.1 to 17.6
+smallest detectable difference (80 percent power, two-sided 5 percent; 2.8 x SE), main gate: median 17.7, range 13.9 to 29.7 deg
+  head L: 17.2 to 18.7
+  head R: 13.9 to 15.4
+  sit- L: 24.4 to 29.7
+  sit- R: 17.0 to 18.6
+
+== enrolment-order proxy: participant number vs first recording date in dated headers (aggregate only)
+participants with a dated header 91 | Spearman 0.959
+recording date predicts group: AUC 0.853 (n 90)
+
+== blood-pressure variability: ABP low-frequency power by group
+head-up-tilt median stroke 2.67 vs control 2.09; Mann-Whitney p 0.985
+sit-stand-balance median stroke 1.84 vs control 1.83; Mann-Whitney p 0.807
+
+== EXPLORATORY: low-frequency coherence (0.07-0.20 Hz), stroke minus control, left, unaligned
+head-up-tilt t60-360 | stroke + hi | n 62 | -0.149 (-0.286, -0.012) p 0.033
+head-up-tilt t60-360 | stroke + hi + z + age + C(sx) + et + map | n 62 | -0.168 (-0.307, -0.030) p 0.018
+head-up-tilt t60-360 | stroke + hi + z + llf | n 62 | -0.176 (-0.310, -0.041) p 0.011
+   median difference -0.120; permutation within regime (5000) p 0.548
+   medians by group x regime (n, coherence): {'Clo': (20, 0.41), 'Chi': (5, 0.79), 'Slo': (11, 0.29), 'Shi': (26, 0.45)}
+sit-stand-balance first300 | stroke + hi | n 60 | -0.163 (-0.304, -0.023) p 0.024
+sit-stand-balance first300 | stroke + hi + z + age + C(sx) + et + map | n 60 | -0.199 (-0.346, -0.052) p 0.009
+sit-stand-balance first300 | stroke + hi + z + llf | n 60 | -0.204 (-0.339, -0.069) p 0.004
+   median difference -0.249; permutation within regime (5000) p 0.008
+   medians by group x regime (n, coherence): {'Clo': (19, 0.58), 'Chi': (7, 0.64), 'Slo': (11, 0.32), 'Shi': (23, 0.37)}
+sit-stand-balance second300 | stroke + hi | n 58 | -0.138 (-0.275, -0.001) p 0.049
+sit-stand-balance second300 | stroke + hi + z + age + C(sx) + et + map | n 58 | -0.180 (-0.325, -0.035) p 0.016
+sit-stand-balance second300 | stroke + hi + z + llf | n 58 | -0.186 (-0.313, -0.058) p 0.005
+   median difference -0.121; permutation within regime (5000) p 0.115
+   medians by group x regime (n, coherence): {'Clo': (19, 0.5), 'Chi': (6, 0.73), 'Slo': (11, 0.38), 'Shi': (22, 0.44)}
+
+== affected hemisphere (stroke, side recorded) vs controls (mean of sides), main gate, per-record aligned
+head-up-tilt: stroke 32, control 25; affected side minus control -2.6 (-13.5, 8.2) p 0.63
+sit-stand-balance: stroke 23, control 25; affected side minus control -8.4 (-23.1, 6.3) p 0.26

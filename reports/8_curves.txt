@@ -1,0 +1,1 @@
+wrote 196 rows; n by protocol and group: {('head-up-tilt', 'control'): 25, ('head-up-tilt', 'stroke'): 37, ('sit-stand-balance', 'control'): 26, ('sit-stand-balance', 'stroke'): 34}

@@ -1,0 +1,53 @@
+records {'head-up-tilt': 68, 'sit-stand': 71, 'sit-stand-balance': 64}
+
+== RQ2 clock gate (share with HR 40-110 and breathing 6-30 per minute at corrected clock)
+head-up-tilt HR med 66.0 br med 14.6 dur med 2339 s; pass 67/68 = 99%
+sit-stand HR med 70.8 br med 15.9 dur med 694 s; pass 69/71 = 97%
+sit-stand-balance HR med 69.5 br med 15.8 dur med 1090 s; pass 64/64 = 100%
+as labelled at 500 Hz, sit-stand-balance: HR med 34.7, breathing med 7.9, duration med 2179 s
+(Group link by gain below is a comparator. The paper's regime definition and OR are in 7_robustness.)
+failing records: HR out 0 breathing out 0
+same person tilt/seated HR ratio med 0.96 IQR [0.9  1.01] n=63
+same person tilt/seated breathing ratio med 0.93 IQR [0.82 0.98] n=63
+lab HR columns ['(SitEO mn) SitEO HR mean', '(SitEC mn) Mean HR SitEC']
+
+== regime by ECG-anchored MCA delay
+head-up-tilt L n 62 antimode nan ms; modes None; agreement with gain 58%; delay hi/lo by gain 411/277
+head-up-tilt R n 54 antimode nan ms; modes None; agreement with gain 48%; delay hi/lo by gain 406/271
+sit-stand-balance L n 61 antimode 232 ms; modes [200.0, 331.0]; agreement with gain 67%; delay hi/lo by gain 386/275
+sit-stand-balance R n 49 antimode nan ms; modes None; agreement with gain 49%; delay hi/lo by gain 381/288
+
+== RQ2 instrumental: within each group, high minus low gain regime
+/content/drive/MyDrive/CVES Fresh/CVES Repair/kit/step1_acquisition.py:41: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  y = y[y.validL.fillna(False).astype(bool)]; h = y.gainL >= 3e4; print(p, "stroke" if st else "control", "n lo/hi", int((~h).sum()), int(h.sum()), "| ECG-ABP shift %.0f ms | ECG-MCA shift %.0f ms | ABP-MCA lag shift %.0f ms" % (y[h].r_abp.median() - y[~h].r_abp.median(), y[h].r_mcaL.median() - y[~h].r_mcaL.median(), y[h].lagxL.median() - y[~h].lagxL.median()))
+head-up-tilt control n lo/hi 21 4 | ECG-ABP shift 7 ms | ECG-MCA shift 144 ms | ABP-MCA lag shift 147 ms
+/content/drive/MyDrive/CVES Fresh/CVES Repair/kit/step1_acquisition.py:41: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  y = y[y.validL.fillna(False).astype(bool)]; h = y.gainL >= 3e4; print(p, "stroke" if st else "control", "n lo/hi", int((~h).sum()), int(h.sum()), "| ECG-ABP shift %.0f ms | ECG-MCA shift %.0f ms | ABP-MCA lag shift %.0f ms" % (y[h].r_abp.median() - y[~h].r_abp.median(), y[h].r_mcaL.median() - y[~h].r_mcaL.median(), y[h].lagxL.median() - y[~h].lagxL.median()))
+head-up-tilt stroke n lo/hi 15 22 | ECG-ABP shift 1 ms | ECG-MCA shift 135 ms | ABP-MCA lag shift 144 ms
+/content/drive/MyDrive/CVES Fresh/CVES Repair/kit/step1_acquisition.py:41: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  y = y[y.validL.fillna(False).astype(bool)]; h = y.gainL >= 3e4; print(p, "stroke" if st else "control", "n lo/hi", int((~h).sum()), int(h.sum()), "| ECG-ABP shift %.0f ms | ECG-MCA shift %.0f ms | ABP-MCA lag shift %.0f ms" % (y[h].r_abp.median() - y[~h].r_abp.median(), y[h].r_mcaL.median() - y[~h].r_mcaL.median(), y[h].lagxL.median() - y[~h].lagxL.median()))
+sit-stand-balance control n lo/hi 21 5 | ECG-ABP shift 40 ms | ECG-MCA shift 80 ms | ABP-MCA lag shift 122 ms
+/content/drive/MyDrive/CVES Fresh/CVES Repair/kit/step1_acquisition.py:41: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  y = y[y.validL.fillna(False).astype(bool)]; h = y.gainL >= 3e4; print(p, "stroke" if st else "control", "n lo/hi", int((~h).sum()), int(h.sum()), "| ECG-ABP shift %.0f ms | ECG-MCA shift %.0f ms | ABP-MCA lag shift %.0f ms" % (y[h].r_abp.median() - y[~h].r_abp.median(), y[h].r_mcaL.median() - y[~h].r_mcaL.median(), y[h].lagxL.median() - y[~h].lagxL.median()))
+sit-stand-balance stroke n lo/hi 12 23 | ECG-ABP shift -8 ms | ECG-MCA shift 114 ms | ABP-MCA lag shift 134 ms
+/content/drive/MyDrive/CVES Fresh/CVES Repair/kit/step1_acquisition.py:42: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  t = d[d.proto == "head-up-tilt"].set_index("sid"); b = d[d.proto == "sit-stand-balance"].set_index("sid"); j = t.join(b, lsuffix="_t", rsuffix="_b", how="inner"); j = j[j.validL_t.fillna(False).astype(bool) & j.validL_b.fillna(False).astype(bool)]; dd = j.lagxL_t - j.lagxL_b
+/content/drive/MyDrive/CVES Fresh/CVES Repair/kit/step1_acquisition.py:42: FutureWarning: Downcasting object dtype arrays on .fillna, .ffill, .bfill is deprecated and will change in a future version. Call result.infer_objects(copy=False) instead. To opt-in to the future behavior, set `pd.set_option('future.no_silent_downcasting', True)`
+  t = d[d.proto == "head-up-tilt"].set_index("sid"); b = d[d.proto == "sit-stand-balance"].set_index("sid"); j = t.join(b, lsuffix="_t", rsuffix="_b", how="inner"); j = j[j.validL_t.fillna(False).astype(bool) & j.validL_b.fillna(False).astype(bool)]; dd = j.lagxL_t - j.lagxL_b
+same person tilt minus seated ABP-MCA lag: n 59, median -3 ms, median |diff| 12 ms, rho 0.86
+regime switchers between sessions n 3 lag moves in expected direction 2
+two estimators {'head-up-tilt': np.float64(0.94), 'sit-stand-balance': np.float64(0.95)}
+
+== group link, by channel gain and by timing
+head-up-tilt L gain [[24, 16], [5, 23]] OR 6.90 (2.17-21.91) p 0.001
+head-up-tilt L timing [[0, 37], [0, 25]] OR 0.68 (0.01-35.18) p 1
+head-up-tilt R gain [[27, 13], [6, 22]] OR 7.62 (2.49-23.32) p 0.00022
+head-up-tilt R timing [[0, 34], [0, 20]] OR 0.59 (0.01-30.82) p 1
+sit-stand-balance L gain [[24, 13], [5, 22]] OR 8.12 (2.49-26.50) p 0.00032
+sit-stand-balance L timing [[31, 4], [17, 9]] OR 4.10 (1.10-15.33) p 0.055
+sit-stand-balance R gain [[25, 12], [6, 21]] OR 7.29 (2.33-22.77) p 0.00042
+sit-stand-balance R timing [[0, 30], [0, 19]] OR 0.63 (0.01-33.28) p 1
+
+== order, amplitude
+head-up-tilt order->regime(left gain) 0.903; order->group 0.842 | low/high stored span ratio (left) 3.49
+sit-stand-balance order->regime(left gain) 0.968; order->group 0.826 | low/high stored span ratio (left) 3.33

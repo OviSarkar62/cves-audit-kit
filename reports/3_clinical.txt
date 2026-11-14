@@ -1,0 +1,34 @@
+n 64 stroke 37 | missing {'pack_years': 9, 'htn_yrs': 4, 'cur_tob': 2, 'gait': 1} | before recoding htn_yrs 20 blank; by group stroke/control 7 13
+point (100 reps): {'R': 0.697, 'P': 0.891, 'A': 0.848, 'R+gait': 0.794, 'R+meds': 0.802, 'gait': 0.84, 'meds': 0.793}
+draft coding: {'R': 0.696, 'P': 0.891, 'A': 0.852}
+refit OOB CI: {'R': (np.float64(0.5), np.float64(0.864)), 'P': (np.float64(0.784), np.float64(0.987)), 'A': (np.float64(0.708), np.float64(0.965)), 'R+gait': (np.float64(0.625), np.float64(0.938)), 'R+meds': (np.float64(0.633), np.float64(0.936))}
+diffs P-R (np.float64(0.015), np.float64(0.42)) A-R (np.float64(0.005), np.float64(0.322)) A-P (np.float64(-0.182), np.float64(0.042))
+Shapley on AUC above 0.5: {'risk': 0.043, 'gait': 0.162, 'meds': 0.142} sum 0.347
+Shapley bootstrap 95%: {'risk': (np.float64(-0.13), np.float64(0.153)), 'gait': (np.float64(0.082), np.float64(0.243)), 'meds': (np.float64(0.022), np.float64(0.233))}
+standardised coefficients, rank-1 share, sign stability:
+  gait          beta -1.49; 95% [-2.1, -0.8]; top-ranked 68%; same sign 100%
+  antiplatelet  beta +0.89; 95% [0.15, 1.68]; top-ranked 16%; same sign 98%
+  age           beta -0.84; 95% [-1.46, 0.25]; top-ranked 3%; same sign 93%
+  statin        beta +0.69; 95% [0.0, 1.48]; top-ranked 6%; same sign 98%
+  htn           beta +0.54; 95% [-0.11, 1.28]; top-ranked 3%; same sign 96%
+  pack_years    beta +0.40; 95% [-0.22, 1.11]; top-ranked 1%; same sign 89%
+  cur_tob       beta +0.33; 95% [-0.43, 1.24]; top-ranked 2%; same sign 84%
+  anticoag      beta +0.31; 95% [0.04, 0.72]; top-ranked 0%; same sign 100%
+  htn_yrs       beta -0.25; 95% [-0.91, 0.57]; top-ranked 0%; same sign 73%
+  bmi           beta -0.13; 95% [-0.7, 0.95]; top-ranked 0%; same sign 49%
+  antihyperlip  beta +0.11; 95% [-0.43, 0.73]; top-ranked 0%; same sign 69%
+  prev_tob      beta +0.10; 95% [-0.5, 1.01]; top-ranked 0%; same sign 75%
+  diabetes      beta +0.07; 95% [-0.47, 0.55]; top-ranked 0%; same sign 52%
+  sex           beta -0.07; 95% [-0.8, 0.57]; top-ranked 0%; same sign 60%
+  hyperlip      beta +0.06; 95% [-0.62, 0.9]; top-ranked 0%; same sign 60%
+age: marginal beta -0.36; adjusted -0.84; group means stroke 64.1 control 67.1
+leave-one-participant-out: {'R': np.float64(0.701), 'P': np.float64(0.889), 'A': np.float64(0.845), 'R+gait': np.float64(0.801), 'R+meds': np.float64(0.799)}
+diffs R+gait-R (np.float64(-0.014), np.float64(0.233)) R+meds-R (np.float64(-0.047), np.float64(0.257))
+TIA participants 1 ; excluded: {'R': 0.708, 'P': 0.901, 'A': 0.887, 'R+meds': 0.842}
+fold-wise A 0.848 vs preprocessing on all data 0.847
+pooled vs per-fold A: 0.848 vs 0.856
+shuffled-label A: mean 0.505 p95 0.631
+calibration slope (out-of-fold, balanced weights, not for clinical use): 0.66
+all completed visits n 91 stroke 43 gait missing 2 {'R': 0.776, 'P': 0.897, 'A': 0.881}
+strict-R (drop BMI, current tobacco) 0.659
+retained gait, stroke/control: {'S': (0.95, 0.85), 'C': (1.2, 1.07)} (in, out)
