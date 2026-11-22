@@ -1,5 +1,5 @@
 # helpers.py - shared by every notebook in the CVES repair series (written by notebook 00).
-# Plain: runs the supervisor's script kit step by step, compares each report with the supervisor's reference run,
+# Plain: runs the analysis kit step by step, compares each report with the reference run,
 # parses the reports into tables, and draws the figures. It never reads group labels itself.
 import os, re, ast, sys, json, shutil, hashlib, platform, subprocess, time, zipfile
 from pathlib import Path
@@ -16,7 +16,7 @@ REPORTS = ["0_known_answers", "1_acquisition", "3_clinical", "4_log", "4_grid", 
 # ---------------------------------------------------------------- paths and config
 def paths():
     return SimpleNamespace(base=BASE, kit=BASE / "kit", work=BASE / "private", reports=BASE / "reports",
-                           ref=BASE / "reference", figs=BASE / "figures", guide=BASE / "guide.md")
+                           ref=BASE / "reference", figs=BASE / "figures")
 
 
 def save_cfg(**kw):
@@ -106,7 +106,7 @@ def check_data(cfg, expect={"head-up-tilt": 68, "sit-stand": 71, "sit-stand-bala
     print("subjects.csv:", "found" if ok else "MISSING")
     for proto, n in expect.items():
         k = len(list((cfg.data / "data" / proto).glob("*.hea")))
-        print("  %-18s %3d records (the supervisor's run had %d)  %s" % (proto, k, n, "OK" if k == n else "CHECK"))
+        print("  %-18s %3d records (the reference run had %d)  %s" % (proto, k, n, "OK" if k == n else "CHECK"))
         ok &= (k == n)
     return ok
 
@@ -119,15 +119,6 @@ def check_private_folder(cfg):
 
 
 # ---------------------------------------------------------------- the kit and the reference reports
-def unpack_kit(guide, kit_dir):
-    t = Path(guide).read_text(encoding="utf-8")
-    Path(kit_dir).mkdir(parents=True, exist_ok=True)
-    found = re.findall(r"<!-- kit-file: (\S+) -->\n~~~~[a-z]*\n(.*?)\n~~~~\n", t, re.S)
-    for name, body in found:
-        (Path(kit_dir) / name).write_text(body + "\n", encoding="utf-8")
-    return [n for n, _ in found]
-
-
 def compile_kit(kit_dir):
     bad = []
     for f in sorted(Path(kit_dir).glob("*.py")):
@@ -135,22 +126,6 @@ def compile_kit(kit_dir):
         if r.returncode:
             bad.append((f.name, r.stderr.strip().splitlines()[-1]))
     return bad
-
-
-def extract_reference(guide, ref_dir):
-    t = Path(guide).read_text(encoding="utf-8")
-    Path(ref_dir).mkdir(parents=True, exist_ok=True)
-    out = {}
-    for title, body in re.findall(r"^## ([^\n]+)\n\n(?:[^~\n][^\n]*\n\n)?~~~~text\n(.*?)\n~~~~", t, re.S | re.M):
-        name = title.split(":")[0].strip()
-        if name.startswith("Raw-archive"):
-            name = "raw_census"
-        elif name.startswith("Same-laboratory"):
-            name = "external_headers"
-        if name[:1].isdigit() or name in ("raw_census", "external_headers"):
-            (Path(ref_dir) / (name + ".txt")).write_text(body + "\n", encoding="utf-8")
-            out[name] = len(body.splitlines())
-    return out
 
 
 # ---------------------------------------------------------------- running a kit step
@@ -176,7 +151,7 @@ def read_report(cfg, name):
     return (cfg.reports / (name + ".txt")).read_text(encoding="utf-8")
 
 
-# ---------------------------------------------------------------- comparing with the supervisor's reference run
+# ---------------------------------------------------------------- comparing with the reference run
 def _skel(line):
     return NUM.sub("#", line).strip()
 
@@ -194,7 +169,7 @@ def _close(a, b):
 
 
 def compare(cfg, name, show_ok=False):
-    """Line-by-line comparison. Rule of thumb from the guide: counts exact, AUC +/-0.01, phase and timing +/-1."""
+    """Line-by-line comparison. Rule of thumb: counts exact, AUC +/-0.01, phase and timing +/-1."""
     rf = cfg.ref / (name + ".txt")
     if not rf.exists():
         print("No reference report for", name)
@@ -233,7 +208,7 @@ def compare(cfg, name, show_ok=False):
         except Exception:
             print(df)
     else:
-        print("All matching. Differences of a few degrees are expected only where the guide says so (library versions, implementation).")
+        print("All matching. Differences of a few degrees are expected only where the analysis notes say so (library versions, implementation).")
     return df
 
 
@@ -316,7 +291,7 @@ def clock_gate(step1_pkl):
     x = d[d.proto == "sit-stand-balance"]
     ok = x.hr.between(40, 110) & x.br.between(6, 30)
     share = ok.mean()
-    print("sit-stand-balance at 1000 Hz: %d of %d records pass the plausibility gate (%.0f%%). The guide requires at least 90%%." % (ok.sum(), len(x), 100 * share))
+    print("sit-stand-balance at 1000 Hz: %d of %d records pass the plausibility gate (%.0f%%). The kit requires at least 90%%." % (ok.sum(), len(x), 100 * share))
     return share >= .9
 
 
@@ -437,7 +412,7 @@ DRAFT = re.compile(r"^(\S+) n (\d+) \((\d+)/(\d+)\) ([+-]\d+\.\d+) \((-?\d+\.\d+
 
 
 def core_exhibit(t6):
-    """The supervisor's core exhibit: same samples, labelled clock vs correct clock (from 6_draft_clock)."""
+    """The core exhibit: same samples, labelled clock vs correct clock (from 6_draft_clock)."""
     name = {"H_LF": "Header clock (500 Hz, as the draft used), 0.07-0.20 Hz", "T_LF": "Correct clock (1000 Hz), true low-frequency band 0.07-0.20 Hz",
             "T_0.14-0.40": "Correct clock, the band the draft really measured (0.14-0.40 Hz)"}
     arm = {"un": "unaligned", "all": "unaligned, all bins", "al": "aligned"}

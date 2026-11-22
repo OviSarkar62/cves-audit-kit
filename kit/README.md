@@ -19,3 +19,5 @@ Regenerates the audit's numbers from the public CVES v1.0.0 files. Plain: a one-
 `curves.py` saves group-level full curves. `step4d_draft_clock.py` shows the clock's effect on the draft's own contrast. `step5_robustness.py` holds the second-round checks: one regime definition, enrolment order, measured bias, timing-defined shortcut test, repeatability, lab-table scale, mains lines and n = 91 attribution.
 
 `external_headers.py` checks same-laboratory datasets for clock errors, reading no group labels.
+| `step4d_draft_clock.py` | What the clock did to the draft's own contrast (the draft's segment rule) |
+| `step4d_main_segment_clock.py` | Same comparison on the paper's main segment (last 300 s of the first seated run), paired, with window counts |

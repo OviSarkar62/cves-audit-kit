@@ -1,0 +1,15 @@
+H_LF_un n 57 (32/25) -3.2 (-11.1, 4.6) p 0.414; median phase 4.2
+H_LF_all n 60 (34/26) -4.7 (-12.6, 3.2) p 0.238; median phase 3.9
+H_LF_al n 57 (32/25) -0.9 (-7.8, 6.0) p 0.796; median phase 2.5
+T_LF_un n 53 (30/23) -1.5 (-18.8, 15.7) p 0.859; median phase 25.9
+T_LF_all n 60 (34/26) +1.8 (-12.8, 16.5) p 0.803; median phase 26.4
+T_LF_al n 53 (29/24) -2.9 (-21.9, 16.1) p 0.761; median phase 27.2
+T_0.14-0.40_un n 57 (32/25) -9.5 (-15.7, -3.2) p 0.004; median phase 2.7
+T_0.14-0.40_all n 60 (34/26) -7.1 (-14.6, 0.3) p 0.059; median phase 3.4
+T_0.14-0.40_al n 58 (33/25) -6.9 (-15.4, 1.5) p 0.105; median phase 2.8
+windows per record, labelled vs correct clock: 11 vs 5
+Paired change on the same participants, correct minus labelled clock, participant bootstrap (2000):
+  main gate, unaligned n 53 labelled -3.7; correct -1.5; change +2.2 (-14.5, 17.4); share of resamples above zero 0.587; Huber labelled -6.2, correct -5.3
+  main gate, aligned n 52 labelled -2.2; correct -2.4; change -0.2 (-17.3, 16.6); share of resamples above zero 0.453; Huber labelled -1.9, correct -4.6
+  all bins, unaligned n 60 labelled -4.7; correct +1.8; change +6.5 (-6.9, 22.8); share of resamples above zero 0.809; Huber labelled -4.9, correct -5.7
+correct clock, phase SD 24.6; labelled clock, phase SD 14.3; correct-clock records beyond +/-90 deg: 1

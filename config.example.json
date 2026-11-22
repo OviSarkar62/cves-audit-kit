@@ -1,5 +1,5 @@
 {
-  "data": "/content/cves-1.0.0",
+  "data": "<absolute path to the downloaded cves-1.0.0 folder>",
   "drive_data": "<folder holding the CVES release on your Drive>",
   "download": false
 }

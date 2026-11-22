@@ -1,0 +1,5 @@
+PASS subjects.csv present: /content/cves/subjects.csv
+NOT CHECKED head-up-tilt record headers (not requested)
+NOT CHECKED sit-stand record headers (not requested)
+PASS sit-stand-balance record headers: found 64, expected 64
+PASS subjects.csv rows: 172 subject rows

@@ -5,3 +5,4 @@ statsmodels==0.15.0
 scikit-learn==1.6.1
 matplotlib==3.10.0
 nbformat==5.11.1
+wfdb==4.3.1

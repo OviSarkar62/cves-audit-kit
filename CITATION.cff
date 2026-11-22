@@ -3,8 +3,24 @@ message: "If you use this software, please cite it as below."
 title: "CVES audit kit"
 type: software
 license: MIT
+version: 1.0.1
+repository-code: "https://github.com/OviSarkar62/cves-audit-kit"
 authors:
   - family-names: Sarkar
     given-names: Ovi
   - family-names: Khaled
     given-names: Md. Asif Bin
+references:
+  - type: dataset
+    title: "Cerebral Vasoregulation in Elderly with Stroke (CVES), version 1.0.0"
+    doi: "10.13026/C2DW96"
+    authors:
+      - family-names: Novak
+        given-names: V.
+  - type: article
+    title: "Transfer function analysis of dynamic cerebral autoregulation: a CARNet white paper 2022 update"
+    journal: "Journal of Cerebral Blood Flow and Metabolism"
+    year: 2023
+    authors:
+      - family-names: Panerai
+        given-names: R. B.

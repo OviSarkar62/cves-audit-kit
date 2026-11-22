@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-04 05:47:21",
+  "date": "2026-11-22 20:22:09",
   "python": "3.13.16",
   "packages": {
     "numpy": "2.4.6",
@@ -10,36 +10,58 @@
     "wfdb": "4.3.1",
     "matplotlib": "3.10.0"
   },
+  "top_level": {
+    "requirements.txt": "2458674b90c57ffcdc0887b061e930e691d356d2b818508307f5aeb98fddb722",
+    "README.md": "0f8c8e59b06bac3a7daccbaf2a2d5c1528fde8a6200e221fa5e8408d0b2f9ad6",
+    "CITATION.cff": "32d8f9527750a48c23fb933e41c9b3c687ef8b1df1e2ffed6bb5a9b2e479d85e",
+    "config.example.json": "48e235a2909ea3a712624adc8fd969a0ef1c00841dc20d18b92ccd6a0f20c0c9",
+    "LICENSE": "8ec10ddaadbaa8ebf84343b1f7a5af6ca6349148b09a701c13489a7c34803fbb",
+    ".gitignore": "9d127d6c3d9cb98e2c72dcf522cf124cf8d5384e96912be3d65af9b8582f6006"
+  },
   "kit": {
     "ANALYSIS_LOCK.md": "eec17618f4761cf2b8a0044915563680fd0217551d39d50667814d422b1d3505",
-    "README.md": "3236cf7e66e93d8d38e83d4805c1c6ca47487379db7a5a21731bd7df78159b73",
+    "README.md": "a9e22070b19fa6d2d48a32dbb68969507afb47de38a20bc0ebf29b08059455db",
     "clinical.py": "ded0499a7f40bae076b2725afa0f9fe0aa53ed6a5340668925d7e70ebc711b7b",
     "core.py": "bad905f398677e2c8540497c32b4e8ea1f6538f6638fc350c7fbc3477d0bcd31",
     "curves.py": "645b1d77f95fd87c218154485ffe23ebed43695b58a2949f40dd5dcd23eaf916",
     "external_headers.py": "1cb32fa8ff666848ded2165f79f56cf620a3802208cab36270edc7f5287ae906",
-    "helpers.py": "798ee544a24f564db98a80421fb634c6b2a8444dab5c29a3544a5e164ba6fe7d",
+    "helpers.py": "d5234c994c0eb054125ad8f6bc6474d7a71c9bfd1a7fbda89cb82466ab308d9a",
     "known_answers.py": "673d97bf5d70060228117ed1cd0e6deaa411a1491b724e45205d523433b8aee3",
+    "known_counts.py": "52a46a3b5054d93210fbbaa3dafa1e93dcf6eded95d1481cabc336aa7ac0364f",
     "ledger.py": "902ad60390d99c4909b5ba2bfef45bfc7d7d37d4c98200f713922800354ee58a",
     "raw_clock_census.py": "227091c070fd641bfd22bf5801a3ba94256af567f4fdddd5158b659655e19680",
-    "run_all.sh": "0904f60663a6dd7df118f62346f9f366104af1e24e30a601684bac422bc30059",
+    "run_all.sh": "54c895fcd2c7ba59ff57656b4f7aece171b223a24f47331076771e1f43be6db1",
     "step1_acquisition.py": "fc0a1b6b10ae65001c1dab4cb3f17c118fb67b61239b8680c940100a4d6a2305",
     "step3_clinical.py": "d942b14b7751d7bdd8bd9e2f7fcfd12032957f52a77eb4310eebc0155ef484c2",
     "step4_signals.py": "215459c0b6a75c6714b73e005b0b013461d0a073dcb57b3a05223ee05f442c56",
     "step4b_analysis.py": "fd84c23abb57fc79049c9348f44094b92293df8f0e8241751dc9bc6c5f8b9346",
     "step4c_tests.py": "d1c50ebd66fcac8d7b43c9710bcba03cf990abcb0b4626400bcbd793bbe3af1c",
     "step4d_draft_clock.py": "2d30bc04f3a5e99636bccf6e4198b88bca69cf721254ffe7b4a2d568ee05df2c",
-    "step5_robustness.py": "705650796a0059820d890a34e70e3077919d0d132f32540351ecd972e20536f0"
+    "step4d_main_segment_clock.py": "fa4d2ced8ffbc0616a501197d39d00d325e9d2b3244e3cd4942573be0fd5f4a2",
+    "step5_robustness.py": "705650796a0059820d890a34e70e3077919d0d132f32540351ecd972e20536f0",
+    "step6_additions.py": "0e61fa72b36654dd8bc6b034a6db0a7c64dfe1cff97c058c2c0c5e82e8cd8a27"
+  },
+  "notebooks": {
+    "00_Setup_and_Kit.ipynb": "d74ca1c90ab80ae21121a2c457eb0e1ac07dadeafca2af27e9c5894d03046101",
+    "01_Clock_and_Acquisition.ipynb": "27c4e1fcce19d2657cf52b4711b1191bb2c00160f98c81ff43ee2f48dee1e5a9",
+    "02_Clinical_Sets_and_Shapley+03_Phase_Grid_and_Curves+04_Tests_and_Robustness+05_Sister_Datasets_Ledger_Freeze.ipynb": "069f9a5b96bbc6c2f35431c41e7df341ad15e07a2dbbce0652290a603526e6b1",
+    "CVES_Step1_additions.ipynb": "e6331053fe3a1389325a440e2c9a93dd78ee0339e48a5ad7fda75f44e96f76f3",
+    "make_figures.ipynb": "d8ad980a9093df17f8f9f167a3bd40b73d30327db820de60d550529a03b1b47c"
   },
   "reports": {
     "0_known_answers.txt": "7e39afcbc0de2b2fd20c4c8fafdfc6f001b978e8593a71a064087b4173fedd34",
+    "0b_known_counts.txt": "e2320aee2e9fd6edfeb1a3aa26a14f145256b400865d69d71be768b2fabc3668",
     "1_acquisition.txt": "0a7a9e28f9f8ac5c906a243d10d4aba2c634c1deaf26d726804493ec5303f010",
     "3_clinical.txt": "4cd1087d1a7118b2d4265dcbeb92adbdca317a530f01e3c955af6476f79d3c50",
     "4_grid.txt": "cab04c3fa2a324a64911c5b6e240ad7ff4b4c0cef25304289de52077e8d89e07",
     "4_log.txt": "323dc82f79d091b7bf445d634a4890feca637a1e540afd7468274ce03798b45b",
     "5_tests.txt": "a8146cafb1497feedb0c3524d4e51185016e9f137123b6a0b340cbf0149a4a53",
     "6_draft_clock.txt": "1894c2bc48226e3e4ab26497e846e145536605b091cd2fa63bb8789aa00b303f",
+    "6b_main_segment_clock.txt": "507051575f03bc03142317642892ca7e637ce2147d429ec386258732a933f988",
     "7_robustness.txt": "b23ac9e27a6b5a6f9792f0a605476bba5e749fa14c06eadff114083f4040c43f",
-    "8_curves.txt": "8d08789215cf618cdb7ad29a2b4d92fd39f7b7443cb6ccffa007cccee5b32446"
+    "8_curves.txt": "8d08789215cf618cdb7ad29a2b4d92fd39f7b7443cb6ccffa007cccee5b32446",
+    "9_additions.txt": "148ff86f17395100ade9a4a935d3aa38dd09bf6ee2effd1beba7673dc0e9adfc",
+    "ledger_summary.txt": "e9871176b5a27a4a6252df4d962c7ecb3613aa7e66d80d83d516c6a22b8febec"
   },
   "figures": {
     "fig4_phase_grid.png": "8b48459aaf9e2d1f65049c773e93a06acc33c82c223aa58e5caf94748c4d7ca1",

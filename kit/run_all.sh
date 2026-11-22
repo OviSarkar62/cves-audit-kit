@@ -11,12 +11,14 @@ cd "$(dirname "$0")" || exit 1
 step() { echo "--- $1"; f="$W/$1.txt"; shift; "$@" > "$f" 2>&1; rc=$?; cat "$f"; [ $rc -eq 0 ] || { echo "Stopped: this step failed. See $f"; exit 1; }; }
 echo "Working folder: $W"
 step 0_known_answers $PY known_answers.py
+step 0b_known_counts $PY known_counts.py "$R"
 step 1_acquisition $PY step1_acquisition.py "$R" "$W/step1.pkl"
 step 3_clinical $PY step3_clinical.py "$R"
 step 4_log $PY step4_signals.py "$R" "$W/step4.pkl"
 step 4_grid $PY step4b_analysis.py "$R" "$W/step4.pkl"
 step 5_tests $PY step4c_tests.py "$R" "$W/step4.pkl"
 step 6_draft_clock $PY step4d_draft_clock.py "$R"
+step 6b_main_segment_clock $PY step4d_main_segment_clock.py "$R"
 step 7_robustness $PY step5_robustness.py "$R" "$W/step1.pkl" "$W/step4.pkl"
 step 8_curves $PY curves.py "$R" "$W/figS1_curves.csv"
 step 9_additions $PY step6_additions.py "$R" "$W/step4.pkl"
