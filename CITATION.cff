@@ -4,8 +4,12 @@ title: "CVES audit kit"
 type: software
 license: MIT
 version: 1.0.1
-date-released: "2026-11-22"
+date-released: "2026-11-23"
 repository-code: "https://github.com/OviSarkar62/cves-audit-kit"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24451017"
+    description: "Archived release v1.0.1 (Zenodo)"
 authors:
   - family-names: Sarkar
     given-names: Ovi
