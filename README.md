@@ -39,16 +39,16 @@ Outputs are aggregates only. No participant-level files, record names or recordi
 Claude (Anthropic) was used to draft and test analysis code and to independently reimplement analyses as a cross-check. The authors ran every analysis and checked each reported number against its output.
 
 ## References
-1. Novak V. Cerebral Vasoregulation in Elderly with Stroke (CVES), version 1.0.0. PhysioNet. doi:10.13026/C2DW96. Data licence: Open Data Commons Attribution License.
-2. Goldberger AL, Amaral LAN, Glass L, et al. PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals. Circulation 2000;101(23):e215-e220.
-3. Claassen JAHR, Meel-van den Abeelen ASS, Simpson DM, Panerai RB; CARNet. Transfer function analysis of dynamic cerebral autoregulation: a white paper from the International Cerebral Autoregulation Research Network. J Cereb Blood Flow Metab 2016;36(4):665-680.
-4. Panerai RB, Brassard P, Burma JS, et al. Transfer function analysis of dynamic cerebral autoregulation: a CARNet white paper 2022 update. J Cereb Blood Flow Metab 2023;43(1):3-25.
-5. Welch PD. The use of fast Fourier transform for the estimation of power spectra. IEEE Trans Audio Electroacoust 1967;15(2):70-73.
-
-Check authors and page numbers against the publisher pages before release.
+1. Novak V. Cerebral Vasoregulation in Elderly with Stroke (CVES), version 1.0.0. PhysioNet; 2018. doi:10.13026/C2DW96. Open Data Commons Attribution License.
+2. Novak V, Hu K, Desrochers L, Novak P, Caplan L, Lipsitz L, Selim M. Cerebral flow velocities during daily activities depend on blood pressure in patients with chronic ischemic infarctions. Stroke 2010;41(1):61-66. doi:10.1161/STROKEAHA.109.565556. (The original publication that the dataset page asks users to cite.)
+3. Goldberger AL, Amaral LAN, Glass L, Hausdorff JM, Ivanov PCh, Mark RG, Mietus JE, Moody GB, Peng C-K, Stanley HE. PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals. Circulation 2000;101(23):e215-e220.
+4. Pollard T, Moody BE, Lehman L, Gow B, Fernandes C, Xie C, Johnson A, Mark RG, Heldt T. PhysioNet as a global platform for biomedical research. Nature Health 2026. doi:10.1038/s44360-026-00096-z.
+5. Claassen JAHR, Meel-van den Abeelen ASS, Simpson D, Panerai RB; CARNet. Transfer function analysis of dynamic cerebral autoregulation: a white paper from the International Cerebral Autoregulation Research Network. J Cereb Blood Flow Metab 2016;36(4):665-680. doi:10.1177/0271678X15626425.
+6. Panerai RB, et al. (18 authors; CARNet). Transfer function analysis of dynamic cerebral autoregulation: a CARNet white paper 2022 update. J Cereb Blood Flow Metab 2023;43(1):3-25. doi:10.1177/0271678X221119760.
+7. Welch PD. The use of fast Fourier transform for the estimation of power spectra: a method based on time averaging over short, modified periodograms. IEEE Trans Audio Electroacoust 1967;15(2):70-73.
 
 ## Licence
 Code: MIT (`LICENSE`). Documentation and aggregate reports: CC BY 4.0.
 
 ## Citation
-See `CITATION.cff`. Please also cite the dataset (Goldberger et al., PhysioNet) as requested on its page.
+See `CITATION.cff`. Please also cite the dataset, the original publication (reference 2) and the PhysioNet platform paper (reference 4), as requested on the dataset page.

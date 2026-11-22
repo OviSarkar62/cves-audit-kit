@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-22 20:22:09",
+  "date": "2026-11-22 23:31:13",
   "python": "3.13.16",
   "packages": {
     "numpy": "2.4.6",
@@ -7,13 +7,13 @@
     "pandas": "2.2.3",
     "statsmodels": "0.15.0",
     "scikit-learn": "1.6.1",
-    "wfdb": "4.3.1",
+    "wfdb": "not installed",
     "matplotlib": "3.10.0"
   },
   "top_level": {
     "requirements.txt": "2458674b90c57ffcdc0887b061e930e691d356d2b818508307f5aeb98fddb722",
-    "README.md": "0f8c8e59b06bac3a7daccbaf2a2d5c1528fde8a6200e221fa5e8408d0b2f9ad6",
-    "CITATION.cff": "32d8f9527750a48c23fb933e41c9b3c687ef8b1df1e2ffed6bb5a9b2e479d85e",
+    "README.md": "686cc0fc4c2ab12ab53b9776679179da09febe60de30be17c3c3f5a4cc7dd881",
+    "CITATION.cff": "2e6cfa78af70ba4713ecf33194b58f776d2e38486c564cb3f76606f818ce72a1",
     "config.example.json": "48e235a2909ea3a712624adc8fd969a0ef1c00841dc20d18b92ccd6a0f20c0c9",
     "LICENSE": "8ec10ddaadbaa8ebf84343b1f7a5af6ca6349148b09a701c13489a7c34803fbb",
     ".gitignore": "9d127d6c3d9cb98e2c72dcf522cf124cf8d5384e96912be3d65af9b8582f6006"
@@ -39,13 +39,13 @@
     "step4d_draft_clock.py": "2d30bc04f3a5e99636bccf6e4198b88bca69cf721254ffe7b4a2d568ee05df2c",
     "step4d_main_segment_clock.py": "fa4d2ced8ffbc0616a501197d39d00d325e9d2b3244e3cd4942573be0fd5f4a2",
     "step5_robustness.py": "705650796a0059820d890a34e70e3077919d0d132f32540351ecd972e20536f0",
-    "step6_additions.py": "0e61fa72b36654dd8bc6b034a6db0a7c64dfe1cff97c058c2c0c5e82e8cd8a27"
+    "step6_additions.py": "dc1536dbaab8b343e7a0adb920739a33d14fd053905fa5e22db80a31f9fcf8b5"
   },
   "notebooks": {
-    "00_Setup_and_Kit.ipynb": "d74ca1c90ab80ae21121a2c457eb0e1ac07dadeafca2af27e9c5894d03046101",
-    "01_Clock_and_Acquisition.ipynb": "27c4e1fcce19d2657cf52b4711b1191bb2c00160f98c81ff43ee2f48dee1e5a9",
-    "02_Clinical_Sets_and_Shapley+03_Phase_Grid_and_Curves+04_Tests_and_Robustness+05_Sister_Datasets_Ledger_Freeze.ipynb": "069f9a5b96bbc6c2f35431c41e7df341ad15e07a2dbbce0652290a603526e6b1",
-    "CVES_Step1_additions.ipynb": "e6331053fe3a1389325a440e2c9a93dd78ee0339e48a5ad7fda75f44e96f76f3",
+    "00_Setup_and_Kit.ipynb": "72e33d34f0b6fcee160b4caf8502bd63baaf25e7660b6fe7bc0fc22ff7a4b67c",
+    "01_Clock_and_Acquisition.ipynb": "de49d6e1692290679f0d85ff84859ea25e45cf1f0dec3c519d24bb0762e518c5",
+    "02_Clinical_Sets_and_Shapley+03_Phase_Grid_and_Curves+04_Tests_and_Robustness+05_Sister_Datasets_Ledger_Freeze.ipynb": "8c0d43d30cf1d8add711caba83e7ef28efaf75558ab3e3b3f46b1ac2a4294974",
+    "CVES_Step1_additions.ipynb": "fcaf86dc196dc601dbd7600deb6201e2b1c0cbf7dfa791fa8bb82ea7f9e32ce9",
     "make_figures.ipynb": "d8ad980a9093df17f8f9f167a3bd40b73d30327db820de60d550529a03b1b47c"
   },
   "reports": {

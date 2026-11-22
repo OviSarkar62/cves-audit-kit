@@ -4,6 +4,7 @@ title: "CVES audit kit"
 type: software
 license: MIT
 version: 1.0.1
+date-released: "2026-11-22"
 repository-code: "https://github.com/OviSarkar62/cves-audit-kit"
 authors:
   - family-names: Sarkar
@@ -13,14 +14,63 @@ authors:
 references:
   - type: dataset
     title: "Cerebral Vasoregulation in Elderly with Stroke (CVES), version 1.0.0"
+    year: 2018
     doi: "10.13026/C2DW96"
     authors:
       - family-names: Novak
+        given-names: Vera
+  - type: article
+    title: "Cerebral flow velocities during daily activities depend on blood pressure in patients with chronic ischemic infarctions"
+    journal: "Stroke"
+    year: 2010
+    volume: 41
+    issue: 1
+    start: 61
+    end: 66
+    doi: "10.1161/STROKEAHA.109.565556"
+    authors:
+      - family-names: Novak
         given-names: V.
+      - family-names: Hu
+        given-names: K.
+      - family-names: Desrochers
+        given-names: L.
+      - family-names: Novak
+        given-names: P.
+      - family-names: Caplan
+        given-names: L.
+      - family-names: Lipsitz
+        given-names: L.
+      - family-names: Selim
+        given-names: M.
+  - type: article
+    title: "Transfer function analysis of dynamic cerebral autoregulation: a white paper from the International Cerebral Autoregulation Research Network"
+    journal: "Journal of Cerebral Blood Flow and Metabolism"
+    year: 2016
+    volume: 36
+    issue: 4
+    start: 665
+    end: 680
+    doi: "10.1177/0271678X15626425"
+    authors:
+      - family-names: Claassen
+        given-names: J. A. H. R.
+      - family-names: Meel-van den Abeelen
+        given-names: A. S. S.
+      - family-names: Simpson
+        given-names: D.
+      - family-names: Panerai
+        given-names: R. B.
   - type: article
     title: "Transfer function analysis of dynamic cerebral autoregulation: a CARNet white paper 2022 update"
     journal: "Journal of Cerebral Blood Flow and Metabolism"
     year: 2023
+    volume: 43
+    issue: 1
+    start: 3
+    end: 25
+    doi: "10.1177/0271678X221119760"
+    notes: "18 authors; the first author is listed here."
     authors:
       - family-names: Panerai
         given-names: R. B.

@@ -1,4 +1,4 @@
-"""Finalisation checks: cohort statuses, grid summaries, smallest detectable difference, coherence by group, environment.
+"""Additional aggregate checks: cohort statuses, grid summaries, smallest detectable difference, coherence by group, environment.
 Plain: the few extra numbers the final paper needs, so none is computed by hand. Usage: step6_additions.py DATA step4.pkl. Aggregates only."""
 import sys, re, platform, importlib, numpy as np, pandas as pd, statsmodels.formula.api as smf, warnings, wfdb
 from scipy import signal as sg
