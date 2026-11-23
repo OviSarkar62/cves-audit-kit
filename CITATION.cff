@@ -3,13 +3,13 @@ message: "If you use this software, please cite it as below."
 title: "CVES audit kit"
 type: software
 license: MIT
-version: 1.0.1
+version: 1.0.2
 date-released: "2026-11-23"
 repository-code: "https://github.com/OviSarkar62/cves-audit-kit"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.24451017"
-    description: "Archived release v1.0.1 (Zenodo)"
+    value: "10.5281/zenodo.24451016"
+    description: "All archived versions (Zenodo); resolves to the latest release"
 authors:
   - family-names: Sarkar
     given-names: Ovi

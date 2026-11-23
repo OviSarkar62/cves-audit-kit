@@ -23,9 +23,9 @@ X["nihss"] = num("NIHSS"); X["mrs"] = num("MRS"); X["sbp"] = num("SBP BASELINE")
 side = comp["Stroke Side"].astype(str).str.upper().str.strip()
 print("\n== baseline table, sit-stand-balance cohort (stroke / control): median [IQR] or n (%); n with data")
 for c in ("age", "bmi", "pack_years", "gait", "sbp", "dbp", "hr", "nihss", "mrs"):
-    out = []
+    out = []; dd = 2 if c == "gait" else 1
     for g in (1, 0):
-        v = X[c][yb == g].dropna(); out.append(f"{v.median():.1f} [{v.quantile(.25):.1f}-{v.quantile(.75):.1f}] (n {len(v)})" if len(v) else "NA")
+        v = X[c][yb == g].dropna(); out.append(f"{v.median():.{dd}f} [{v.quantile(.25):.{dd}f}-{v.quantile(.75):.{dd}f}] (n {len(v)})" if len(v) else "NA")
     print(f"  {c}: {out[0]} / {out[1]}")
 for c in ("sex", "htn", "diabetes", "hyperlip", "cur_tob", "antiplatelet", "anticoag", "statin", "antihyperlip"):
     out = []

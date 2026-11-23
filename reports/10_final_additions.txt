@@ -1,0 +1,40 @@
+== robust (Huber) estimates, main CARNet gate, main segments (tilt 60-360 s; seated first 300 s), stroke minus control
+cells 12 | Huber negative in 11 | Huber range -8.5 to 1.1, median -3.8 | least-squares range -3.3 to 3.3 | intervals excluding zero 0
+  head t60-360 L un n 54: least squares -2.8 (-15.9, 10.3); Huber -8.5
+  head t60-360 L pr n 56: least squares -0.9 (-13.4, 11.5); Huber -6.3
+  head t60-360 L ro n 56: least squares -1.1 (-13.1, 11.0); Huber -5.0
+  head t60-360 R un n 52: least squares -1.5 (-11.3, 8.2); Huber -3.6
+  head t60-360 R pr n 52: least squares +0.3 (-10.5, 11.1); Huber -2.5
+  head t60-360 R ro n 52: least squares +1.4 (-8.9, 11.7); Huber -1.8
+  sit- first300 L un n 53: least squares -1.6 (-18.7, 15.5); Huber -5.8
+  sit- first300 L pr n 52: least squares +0.1 (-18.5, 18.7); Huber -4.0
+  sit- first300 L ro n 50: least squares -3.3 (-24.1, 17.6); Huber -8.4
+  sit- first300 R un n 44: least squares +0.7 (-11.7, 13.1); Huber -1.1
+  sit- first300 R pr n 43: least squares +3.3 (-9.8, 16.3); Huber +1.1
+  sit- first300 R ro n 42: least squares +0.5 (-11.4, 12.4); Huber -1.5
+
+== regime label added to the clinical variables (A = 15 clinical variables), paired refit bootstrap (1000), same participants as Table 7
+sit-stand-balance pr n 52 S 29 | A 0.846; A+regime 0.861, change +0.014 CI [-0.069, 0.094] | A+phase and gain 0.829, change -0.017 CI [-0.115, 0.025]
+sit-stand-balance ro n 50 S 27 | A 0.838; A+regime 0.853, change +0.015 CI [-0.08, 0.107] | A+phase and gain 0.818, change -0.020 CI [-0.138, 0.029]
+head-up-tilt pr n 54 S 31 | A 0.810; A+regime 0.865, change +0.055 CI [-0.045, 0.154] | A+phase and gain 0.795, change -0.016 CI [-0.107, 0.067]
+head-up-tilt ro n 55 S 32 | A 0.819; A+regime 0.871, change +0.053 CI [-0.038, 0.153] | A+phase and gain 0.804, change -0.014 CI [-0.104, 0.062]
+(the supine increment analysis is restricted to participants who are also in the seated cohort: inner join with X)
+
+== analysed segments: gaps (invalid samples in the WFDB file) and physiology by group and regime, left channel
+head-up-tilt t60-360 | records analysed 62 | records with any invalid sample in the segment: ABP 0, MCA 0, CO2 0, any 0 | largest gap fraction 0.0000
+  control, low regime, n 20: mean ABP 79.3 [73.6-89.3] mmHg; heart rate 62.6 [57.1-67.5] /min; breathing rate 13.2 [11.4-16.6] /min; end-tidal CO2 37.6 [35.8-38.4] mmHg
+  control, high regime, n 5: mean ABP 79.9 [77.5-83.0] mmHg; heart rate 63.6 [52.4-67.0] /min; breathing rate 9.0 [8.2-13.4] /min; end-tidal CO2 38.4 [37.3-41.0] mmHg
+  stroke, low regime, n 11: mean ABP 84.9 [80.0-91.6] mmHg; heart rate 68.5 [63.6-75.7] /min; breathing rate 14.9 [13.2-15.6] /min; end-tidal CO2 36.2 [33.4-37.9] mmHg
+  stroke, high regime, n 26: mean ABP 85.1 [76.8-92.2] mmHg; heart rate 66.9 [62.3-70.4] /min; breathing rate 15.8 [13.7-17.2] /min; end-tidal CO2 37.5 [34.9-39.8] mmHg
+sit-stand-balance first300 | records analysed 60 | records with any invalid sample in the segment: ABP 0, MCA 0, CO2 0, any 0 | largest gap fraction 0.0000
+  control, low regime, n 19: mean ABP 90.7 [81.1-99.4] mmHg; heart rate 64.9 [61.9-70.4] /min; breathing rate 15.5 [13.5-17.2] /min; end-tidal CO2 36.9 [34.6-37.9] mmHg
+  control, high regime, n 7: mean ABP 84.4 [80.0-96.1] mmHg; heart rate 69.8 [61.2-74.1] /min; breathing rate 13.1 [12.9-17.7] /min; end-tidal CO2 34.9 [33.6-38.0] mmHg
+  stroke, low regime, n 11: mean ABP 88.2 [83.8-93.6] mmHg; heart rate 70.0 [64.3-72.6] /min; breathing rate 16.0 [14.5-16.3] /min; end-tidal CO2 35.7 [33.8-39.0] mmHg
+  stroke, high regime, n 23: mean ABP 91.0 [84.9-94.7] mmHg; heart rate 69.4 [65.9-77.7] /min; breathing rate 17.0 [16.0-18.7] /min; end-tidal CO2 37.3 [35.9-40.2] mmHg
+
+== seated-run durations, all sit-stand-balance recordings (force-plate rule of step4_signals.py)
+recordings 64, none with a seated run 0
+  first run, tail segment used: n 64 | 300 s: 63 | 200 to under 300 s: 0 | under 200 s: 1
+  longest run, tail segment used: n 64 | 300 s: 63 | 200 to under 300 s: 0 | under 200 s: 1
+  second run, tail segment used: n 63 | 300 s: 60 | 200 to under 300 s: 1 | under 200 s: 2
+  first seated run, full duration: median 320 s (IQR 314 to 329), range 61 to 584

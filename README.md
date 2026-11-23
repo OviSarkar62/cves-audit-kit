@@ -8,7 +8,7 @@ The kit audits sampling rate, scale and timing in the public PhysioNet CVES reco
 The recordings are **not** redistributed here. Download CVES v1.0.0 from PhysioNet (doi:10.13026/C2DW96, Open Data Commons Attribution License) and point the kit at the folder that contains `subjects.csv`.
 
 ## Layout
-- `kit/` analysis scripts. `run_all.sh` runs every step in order and stops at the first failure, including a failed known-answer test. `step6_additions.py` adds the baseline table, cohort statuses, smallest detectable difference, enrolment-order check, blood-pressure variability, exploratory coherence and affected-hemisphere checks.
+- `kit/` analysis scripts. `run_all.sh` runs every step in order and stops at the first failure, including a failed known-answer test. `step6_additions.py` adds the baseline table, cohort statuses, smallest detectable difference, enrolment-order check, blood-pressure variability, exploratory coherence and affected-hemisphere checks. `step7_final_additions.py` adds the robust-estimate summary, the regime-label increment with intervals, signal gaps and physiology by group and regime, and seated-run durations; `step7b_version_compare.py` compares two runs of the grid.
 - `reports/` aggregate text output of each step (counts, medians, intervals only), plus `MANIFEST.json` and `ledger.csv`.
 - `notebooks/` Colab notebooks that run the kit step by step. Outputs are cleared.
 - `figures/` the figures used in the manuscript (one copy of each, including Figure 4). `figures_code/` the other figures drawn by the code.
@@ -51,4 +51,4 @@ Claude (Anthropic) was used to draft and test analysis code and to independently
 Code: MIT (`LICENSE`). Documentation and aggregate reports: CC BY 4.0.
 
 ## Citation
-Archived release v1.0.1: https://doi.org/10.5281/zenodo.24451017 (all versions: https://doi.org/10.5281/zenodo.24451016). See `CITATION.cff`. Please also cite the dataset, the original publication (reference 2) and the PhysioNet platform paper (reference 4), as requested on the dataset page.
+Archived releases: v1.0.1 https://doi.org/10.5281/zenodo.24451017. Every version, including v1.0.2, is listed under https://doi.org/10.5281/zenodo.24451016, which always resolves to the latest release. See `CITATION.cff`. Please also cite the dataset, the original publication (reference 2) and the PhysioNet platform paper (reference 4), as requested on the dataset page.
