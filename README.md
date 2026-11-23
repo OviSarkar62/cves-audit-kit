@@ -51,4 +51,4 @@ Claude (Anthropic) was used to draft and test analysis code and to independently
 Code: MIT (`LICENSE`). Documentation and aggregate reports: CC BY 4.0.
 
 ## Citation
-See `CITATION.cff`. Please also cite the dataset, the original publication (reference 2) and the PhysioNet platform paper (reference 4), as requested on the dataset page.
+Archived release v1.0.1: https://doi.org/10.5281/zenodo.24451017 (all versions: https://doi.org/10.5281/zenodo.24451016). See `CITATION.cff`. Please also cite the dataset, the original publication (reference 2) and the PhysioNet platform paper (reference 4), as requested on the dataset page.
