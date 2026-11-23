@@ -9,7 +9,7 @@ The recordings are **not** redistributed here. Download CVES v1.0.0 from PhysioN
 
 ## Layout
 - `kit/` analysis scripts. `run_all.sh` runs every step in order and stops at the first failure, including a failed known-answer test. `step6_additions.py` adds the baseline table, cohort statuses, smallest detectable difference, enrolment-order check, blood-pressure variability, exploratory coherence and affected-hemisphere checks. `step7_final_additions.py` adds the robust-estimate summary, the regime-label increment with intervals, signal gaps and physiology by group and regime, and seated-run durations; `step7b_version_compare.py` compares two runs of the grid.
-- `reports/` aggregate text output of each step (counts, medians, intervals only), plus `MANIFEST.json` and `ledger.csv`.
+- `reports/` aggregate text output of each step (counts, medians, intervals only), plus `MANIFEST.json`, which lists every report with its checksum.
 - `notebooks/` Colab notebooks that run the kit step by step. Outputs are cleared.
 - `figures/` the figures used in the manuscript (one copy of each, including Figure 4). `figures_code/` the other figures drawn by the code.
 
@@ -17,7 +17,7 @@ The recordings are **not** redistributed here. Download CVES v1.0.0 from PhysioN
 ```
 sh kit/run_all.sh /absolute/path/to/cves-1.0.0 /absolute/path/to/private-folder-outside-git
 ```
-The second argument is a working folder that holds per-participant intermediate files (`*.pkl`). Keep it outside this repository; it is listed in `.gitignore`. The notebooks default to a Google Drive layout; set `CVES_BASE` to change it (see `kit/helpers.py`, `config.example.json`).
+The second argument is a working folder that holds per-participant intermediate files (`*.pkl`). Keep it outside this repository; it is listed in `.gitignore`. The notebooks default to a Google Drive layout; set the `CVES_BASE` environment variable to your working folder to change it (see `kit/helpers.py`, `config.example.json`).
 
 ## Environment (this release was produced with)
 - Python 3.13.16 (the release run); install with `pip install -r requirements.txt`
@@ -35,6 +35,9 @@ Re-running with other library versions can move individual phase estimates (the 
 ## Privacy
 Outputs are aggregates only. No participant-level files, record names or recording dates are in this repository. Do not commit the working folder.
 
+## Reporting
+The manuscript follows TRIPOD+AI and STROBE where they apply. The analysis is post hoc and was not pre-registered; the analysis plan was fixed in `kit/ANALYSIS_LOCK.md` before the final runs.
+
 ## Notes on AI assistance
 Claude (Anthropic) was used to draft and test analysis code and to independently reimplement analyses as a cross-check. The authors ran every analysis and checked each reported number against its output.
 
@@ -51,4 +54,4 @@ Claude (Anthropic) was used to draft and test analysis code and to independently
 Code: MIT (`LICENSE`). Documentation and aggregate reports: CC BY 4.0.
 
 ## Citation
-Archived releases: v1.0.1 https://doi.org/10.5281/zenodo.24451017. Every version, including v1.0.2, is listed under https://doi.org/10.5281/zenodo.24451016, which always resolves to the latest release. See `CITATION.cff`. Please also cite the dataset, the original publication (reference 2) and the PhysioNet platform paper (reference 4), as requested on the dataset page.
+Current release: v1.0.2 (commit 5149ed0), archived at https://doi.org/10.5281/zenodo.24455074. Every version is listed under https://doi.org/10.5281/zenodo.24451016, which always resolves to the latest release. See `CITATION.cff`. Please also cite the dataset, the original publication (reference 2) and the PhysioNet platform paper (reference 4), as requested on the dataset page.
