@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 title: "CVES audit kit"
 type: software
 license: MIT
-version: 1.0.3
+version: 1.0.4
 date-released: 2026-11-23
 repository-code: "https://github.com/OviSarkar62/cves-audit-kit"
 identifiers:
