@@ -7,7 +7,7 @@ from types import SimpleNamespace
 import numpy as np
 import pandas as pd
 
-BASE = Path(os.environ.get("CVES_BASE", "/content/drive/MyDrive/CVES Fresh/CVES Repair"))
+BASE = Path(os.environ.get("CVES_BASE", str(Path(__file__).resolve().parents[1])))  # default: the repository root
 CFG_FILE = BASE / "config.json"
 NUM = re.compile(r"[-+−]?\d+(?:\.\d+)?(?:e[-+]?\d+)?", re.I)
 REPORTS = ["0_known_answers", "1_acquisition", "3_clinical", "4_log", "4_grid", "5_tests", "6_draft_clock", "7_robustness", "8_curves"]
