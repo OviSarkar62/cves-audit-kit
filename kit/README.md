@@ -1,6 +1,6 @@
 # CVES audit kit
 
-Code, aggregate outputs and notebooks for the manuscript *Clinical variables, recording artifacts and cerebral pressure-flow phase in chronic stroke: a reanalysis of the public CVES dataset* (Sarkar and Khaled).
+Code, aggregate outputs and notebooks for *Clinical variables, recording artifacts and cerebral pressure-flow phase in chronic stroke: a reanalysis of the public CVES dataset*.
 
 The kit audits sampling rate, scale and timing in the public PhysioNet CVES recordings, computes low-frequency pressure-flow phase on the corrected clock under every analysis choice, and evaluates clinical variable sets and signal increments.
 
